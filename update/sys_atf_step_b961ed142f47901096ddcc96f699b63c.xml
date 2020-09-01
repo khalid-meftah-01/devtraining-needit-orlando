@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Send a 'POST' request to '/api/x_58872_needit/receive_all_record_and_call_import'</description>
+        <display_name>Send REST Request - Inbound</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <snapshot/>
+        <step_config display_value="Send REST Request - Inbound">e00571a10b3222000b7da95e93673a8f</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>b961ed142f47901096ddcc96f699b63c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Send REST Request - Inbound</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_atf_step_b961ed142f47901096ddcc96f699b63c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:11:00</sys_updated_on>
+        <table/>
+        <test display_value="REST inbound test">e7ff8d982f07901096ddcc96f699b65c</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=b961ed142f47901096ddcc96f699b63c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b961ed142f47901096ddcc96f699b63c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>15b12d542f47901096ddcc96f699b63c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:08:06</sys_updated_on>
+        <value>5182e5942f47901096ddcc96f699b652</value>
+        <variable display_value="">020a6af09fd32200ef4afa7dc67fcfec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b961ed142f47901096ddcc96f699b63c</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>15b12d542f47901096ddcc96f699b63d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:11:00</sys_updated_on>
+        <value>[{&#13;
+    "u_requested_for": "System administrator",&#13;
+    "u_short_description": "test import rest 55"},&#13;
+{&#13;
+    "u_requested_for": "System administrator",&#13;
+    "u_short_description": "test import rest 66"}&#13;
+]</value>
+        <variable display_value="">81e042650b3222000b7da95e93673aa2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b961ed142f47901096ddcc96f699b63c</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>51b12d542f47901096ddcc96f699b63d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:03:20</sys_updated_on>
+        <value>post</value>
+        <variable display_value="">59877da10b3222000b7da95e93673a56</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b961ed142f47901096ddcc96f699b63c</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>99b12d542f47901096ddcc96f699b63d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:03:20</sys_updated_on>
+        <value/>
+        <variable display_value="">58408e250b3222000b7da95e93673a5c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b961ed142f47901096ddcc96f699b63c</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>9db12d542f47901096ddcc96f699b63c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:03:20</sys_updated_on>
+        <value/>
+        <variable display_value="">cec002650b3222000b7da95e93673aae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>b961ed142f47901096ddcc96f699b63c</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>d5b12d542f47901096ddcc96f699b63d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:03:20</sys_updated_on>
+        <value>/api/x_58872_needit/receive_all_record_and_call_import</value>
+        <variable display_value="">50bff9250b3222000b7da95e93673a9b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b961ed142f47901096ddcc96f699b63c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>basic_auth</field>
+        <id>b961ed142f47901096ddcc96f699b63c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>11b12d542f47901096ddcc96f699b63b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:03:20</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>end_point</field>
+        <id>b961ed142f47901096ddcc96f699b63c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>ddb12d542f47901096ddcc96f699b63b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:03:20</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value>/api/x_58872_needit/receive_all_record_and_call_import</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>b961ed142f47901096ddcc96f699b63c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>59b12d542f47901096ddcc96f699b63b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:03:20</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>b961ed142f47901096ddcc96f699b63c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>91b12d542f47901096ddcc96f699b63c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:03:20</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>request_body</field>
+        <id>b961ed142f47901096ddcc96f699b63c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-31 12:03:20</sys_created_on>
+        <sys_id>1db12d542f47901096ddcc96f699b63b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 12:11:00</sys_updated_on>
+        <table>var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f</table>
+        <value>[{&#13;
+    "u_requested_for": "System administrator",&#13;
+    "u_short_description": "test import rest 55"},&#13;
+{&#13;
+    "u_requested_for": "System administrator",&#13;
+    "u_short_description": "test import rest 66"}&#13;
+]</value>
+    </sys_element_mapping>
+</record_update>

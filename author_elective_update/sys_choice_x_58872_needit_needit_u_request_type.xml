@@ -91,10 +91,10 @@
         <sys_created_by/>
         <sys_created_on>2020-08-25 17:32:40</sys_created_on>
         <sys_id>b3908c7e2f72501096ddcc96f699b688</sys_id>
-        <sys_mod_count/>
+        <sys_mod_count>0</sys_mod_count>
         <sys_recorded_at>17426add2c00000000</sys_recorded_at>
-        <sys_updated_by/>
-        <sys_updated_on/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-31 09:46:59</sys_updated_on>
         <type>Choice list</type>
         <update_guid>73908c7e43725010a5f5dcf46e6f1b88</update_guid>
         <update_guid_history>73908c7e43725010a5f5dcf46e6f1b88:833312879</update_guid_history>

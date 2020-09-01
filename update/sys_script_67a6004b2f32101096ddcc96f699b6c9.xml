@@ -6,7 +6,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>false</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -29,39 +29,8 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	try { 
-		
-		var req = new sn_ws.RESTMessageV2('x_58872_needit.Call Import Web service', 'Call Web Service');
-			
-		var short_description=current.getDisplayValue("short_description");
-		var requested_for=current.getDisplayValue("short_description");
-		
-		gs.info("short_description:"+short_description);
-		gs.info("requested_for:"+requested_for);
-		
-		req.setStringParameterNoEscape('short_description', short_description);
-		req.setStringParameterNoEscape('requested_for', requested_for);
-		
-	
-		var body={};
-		body.u_requested_for=requested_for;
-		body.u_short_description=short_description;
-		
-		
-		req.setRequestHeader("Accept","application/json");
-		req.setRequestBody(JSON.stringify(body));
-
-		
-		var user='admin';
-		var password='21YVJnPTqhoj';
-		req.setBasicAuth(user,password);
-		var response=req.execute();
-		// test if created
-		
-}
-catch(ex) {
- var message = ex.message;
-}
+	var utility=new SourceUtility();
+	utility.sendImportItem(current,previous);
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -70,7 +39,7 @@ catch(ex) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>67a6004b2f32101096ddcc96f699b6c9</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>Call Import Web Service for NeedIt</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -78,7 +47,7 @@ catch(ex) {
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_67a6004b2f32101096ddcc96f699b6c9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-08-28 10:24:56</sys_updated_on>
+        <sys_updated_on>2020-08-31 09:59:15</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

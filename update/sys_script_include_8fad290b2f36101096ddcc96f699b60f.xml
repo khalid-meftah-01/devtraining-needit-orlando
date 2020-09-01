@@ -12,20 +12,20 @@ SourceUtility.prototype = {
     initialize: function() {
 
     },
-    GetAllItems: function() {
+    getAllItems: function() {
         var body = [];
         // 1. Create an object to store rows from a table	
-        var incidentGR = new GlideRecord('x_58872_needit_source_import_incident');
+        var gr_incident = new GlideRecord('x_58872_needit_source_import_incident');
 
         // 3. Execute query 
-        incidentGR.query();
+        gr_incident.query();
 
         // 4. Process returned records
-        while (incidentGR.next()) {
-		
-			var requested_for=incidentGR.getDisplayValue("requested_for");
-			var short_description=incidentGR.getDisplayValue("short_description");
-			
+        while (gr_incident.next()) {
+
+            var requested_for = gr_incident.getDisplayValue("requested_for");
+            var short_description = gr_incident.getDisplayValue("short_description");
+
             body.push({
                 "u_requested_for": requested_for,
                 "u_short_description": short_description
@@ -33,19 +33,77 @@ SourceUtility.prototype = {
         }
         return body;
     },
+    sendAllItemForMassImport: function(current, previous) {
+      
+        var body = getAllItems();
+
+        var req_insertItems = new sn_ws.RESTMessageV2();
+        req_insertItems.setEndpoint('https://dev100966.service-now.com/api/x_58872_needit/receive_all_record_and_call_import');
+
+        req_insertItems.setHttpMethod('post');
+
+        req_insertItems.setRequestHeader("Accept", "application/json");
+        req_insertItems.setRequestBody(JSON.stringify(body));
+        gs.info("body to send :" + body.length);
+
+        var user = 'admin';
+        var password = '21YVJnPTqhoj';
+        req_insertItems.setBasicAuth(user, password);
+        var response = req_insertItems.execute();
+
+        var httpStatus = response.getStatusCode();
+        gs.info("HttpStatus :" + httpStatus);
+    },
+    sendImportItem: function(current, previous) {
+        try {
+
+            var req = new sn_ws.RESTMessageV2('x_58872_needit.Call Import Web service', 'Call Web Service');
+
+            var short_description = current.getDisplayValue("short_description");
+            var requested_for = current.getDisplayValue("short_description");
+
+            gs.info("short_description:" + short_description);
+            gs.info("requested_for:" + requested_for);
+
+            req.setStringParameterNoEscape('short_description', short_description);
+            req.setStringParameterNoEscape('requested_for', requested_for);
+
+
+            var body = {};
+            body.u_requested_for = requested_for;
+            body.u_short_description = short_description;
+
+
+            req.setRequestHeader("Accept", "application/json");
+            req.setRequestBody(JSON.stringify(body));
+
+
+            var user = 'admin';
+            var password = '21YVJnPTqhoj';
+            req.setBasicAuth(user, password);
+            var response = req.execute();
+            //var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+            if (httpStatus != '201')
+                current.setAbortAction(true);
+
+        } catch (ex) {
+            var message = ex.message;
+        }
+    },
     type: 'SourceUtility'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-08-27 15:45:37</sys_created_on>
         <sys_id>8fad290b2f36101096ddcc96f699b60f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>SourceUtility</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_include_8fad290b2f36101096ddcc96f699b60f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-08-28 08:20:59</sys_updated_on>
+        <sys_updated_on>2020-08-31 10:14:59</sys_updated_on>
     </sys_script_include>
 </record_update>
